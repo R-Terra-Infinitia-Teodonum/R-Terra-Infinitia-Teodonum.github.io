@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+	<meta charset = "utf-8" />
+	<title>Learning Compendium</title>
+	<meta name = "description" content = 'You can learn anything. The question si, "how"?' />
+	<meta name = "viewport" content = "width=device-width, initial-scale=1" />
+	<link rel = "stylesheet" href = "../../styling/pagestyle.css" />
+	<link rel = "icon" type = "image/webp" href = "../pix/infinitia.webp" />
+</head>
+<body>
+	<header>
+		<h1 class = "center">Learning Compendium</h1>
+	</header>
+	<nav>
+		<a href = "..">&lt-- Return to Index</a>
+	</nav>
+	<main>
+		<h2 class = "center">Accessibility</h2>
+		<p>There are, roughly speaking, eight pieces to accessibility.</p>
+		<p>1. Semantic HTML - Semantic HTML is incredibly useful for specifying a structure for your webpage. You can later use this specification to rewrite the webpage more easily, and it is used by screen readers.</p>
+		<p>2. aria-label - When you have a type of content that is not easily accessible for someone using a screen reader - a div without a name - or so on - you can use aria-label. If you use those kinds of divs or things which are solely for CSS styling you should, in my opinion, write an aria-label apologising to your screen reader user, if you are in the "everyone gets the same experience camp", and if not, make the experience fun for the screen reader user!</p>
+		<p>3. The lang Attribute - used for webpages or for part of text (sections of text, inline spans of text) - it helps screen readers tell the language of a website, something screen readers can technically determine automatically, though it is harder for some language - being especially useful for smaller sections or spans of text in different languages than the main website. It is as such that the part of the text is read by the screen readers in that language's accent, properly, rather than the accent of the main language of the webpage;</p>
+		<p>4. aria-hidden: When there is something which you are hiding visually, this will also make it invisible to screen readers, adding this HTML proprety to an element's starting tag or only tag.</p>
+		<p>5. CSS Tables of Contents - Making your programming code accessible is useful for future you and others' experience, and I think it shows courage... - Divide your CSS into chapters and specify them at the beginning of the stylesheet file, then writing in the headings for each chapter throughout the code. I usually recommend two new lines before each chapter heading and one after, such as: <code>[\n\n] /* 1. Variable definitions */ [\n]</code>.
+		<p>6. CSS Ordering - Order things from general to specific. For example, you may start some general styling, if that's how you divide your CSS, at the beginning of the file, and start with <code>*, *::before, *::after { box-sizing: border-box }</code> - which does some neat cool things, then going on to write the <code>body</code> element styling, in which you will style things based on sections, see point seven; Then, you may move on to styling the anchor element, a more particular element, as it is generally meant to look, continuing with the :hover option and :focus option - which is a general order for hovering such "pseudo-classes" - then moving on to styling a .center tag. This is one way you may style from general to specific [general, since you are in general styling].</p>
+		<p>7. CSS Sections of Code - Within your classes, tags, and so on, you should take care of the styling in blocks, rather than just listing the attributes one by one, in a disorganized fashion. [For how to organize a block of code see point eight.] Here, for example, if some of your attributes are about text and some are about setting a background image for the webpage, or if some are about setting padding and margins, and width, and some are about the text and it's background color, you may divide the attributes as such. Really, this is a recommendation, to try not just writing CSS code, but to wonder, as you write: "How best may I divide this big block for readability?", as you write. I am not aware of anyone being "naturally talented" at this, quite, so you'll have to build these skills as you go. Good luck!</p>
+		<p>8. CSS Ordering (Section Version) - Within a section, you may find it useful to order propreties the same way you put them in, which is the way they make most sense for you to think them up. I don't care if it looks weird that you came up with them in a weird order. If it's really weird, you can change it, whatever. As always, my recommendation with this practice is to have fun.</p>
+	</main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/*
+ * Table of Contents:
+ *
+ * 1. Variable Definitions
+ * 2. General Styling
+ * 3. header Styling
+ * 4. Back to Main nav Styling
+ * 5. main Index Styling
+ *
+ */
+
+
+/* 1. Variable Definitions */
+
+:root {
+	--fs-main: clamp(1.2rem, 3vw, 1.46rem);
+
+	--clr-links-base: #40F0E0;
+	--clr-links-hover: #11FF00;
+
+	--clr-virtualmagic-bg: rgba(0, 0, 255, 0.5);
+	--clr-worldly-bg: rgba(0, 175, 0, 0.5);
+	--clr-nav-item-bg: rgba(0, 155, 255, 0.5);
+}
+
+
+/* 2. General STyling */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	background-image: url('../pix/limanu.webp');
+	background-size: cover;
+	background-repeat: none;
+	background-attachment: fixed;
+
+	color: white;
+	word-wrap: break-word;
+	font-size: var(--fs-main);
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-links-base);
+}
+
+a:hover {
+	color: var(--clr-links-hover);
+}
+
+a:focus {
+	outline: 3px solid red;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* 3. header Styling */
+
+header {
+	background-color: cyan;
+	overflow: hidden;
+	color: yellow;
+
+	text-shadow: 2px 2px black;
+	font-size: 1.14em;
+}
+
+
+/* 4. Back to Main nav Styling */
+
+nav {
+	margin-top: 3rem;
+}
+
+nav a {
+	color: white;
+	background-color: var(--clr-nav-item-bg);
+	padding: 1.2rem 1rem;
+
+	font-size: 1.02em;
+}
+
+
+/* 5. main Index Styling */
+
+main {
+	width: 94%;
+	margin-inline: auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+
+	display: flex;
+	flex-direction: column;
+
+	text-shadow: 1px 1px black;
+}
+
+main a {
+	display: block;
+}
+
+section {
+	width: min(70ch, 100%);
+	margin-inline: auto;
+	padding: 0.5rem 2rem;
+	padding-bottom: 2.5rem;
+
+	margin-top: 3rem;
+}
+
+section + section {
+	margin-top: 3rem;
+}
+
+@media(min-width: 720px) {
+	main {
+		flex-direction: row;
+	}
+
+	main > * {
+		flex-basis: 100%;
+	}
+
+	main > * + * {
+		margin-left: 1rem;
+	}
+}
+
+.virtualmagic {
+	background-color: var(--clr-virtualmagic-bg);
+}
+
+.worldly {
+	background-color: var(--clr-worldly-bg);
+}

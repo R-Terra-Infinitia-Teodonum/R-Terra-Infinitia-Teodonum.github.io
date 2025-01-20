@@ -1,0 +1,74 @@
+/*
+ * Table of Contents:
+ *
+ * 1. Variable Definitions
+ * 2. General Styling
+ * 3. header Styling
+ * 4. nav Index Styling
+ * 5. main Index Styling
+ *
+ */
+
+
+/* 1. Variable Definitions */
+
+:root {
+	--fs-main: clamp(1.2rem, 3vw, 1.46rem);
+
+	--clr-nav-item-bg: rgba(0, 155, 255, 0.5);
+}
+
+
+/* 2. General STyling */
+
+body {
+	margin: 0;
+
+	background-image: url('../pix/limanu.webp');
+	background-size: cover;
+	background-repeat: none;
+	background-attachment: fixed;
+
+	word-wrap: break-word;
+	font-size: var(--fs-main);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: lime;
+}
+
+a:focus {
+	outline: 3px solid red;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* 3. header Styling */
+
+header {
+	color: yellow;
+	text-shadow: 2px 2px black;
+	font-size: 1.22em;
+}
+
+
+/* 4. nav Index Styling */
+
+nav {
+	margin-top: 3rem;
+}
+
+nav a {
+	color: white;
+	background-color: var(--clr-nav-item-bg);
+	padding: 1.2rem 1rem;
+
+	font-size: 1.02em;
+}
